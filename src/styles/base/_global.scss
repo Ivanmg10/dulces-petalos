@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as *;
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: $color-neutral-200;
+  color: $color-neutral-900;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-m;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}

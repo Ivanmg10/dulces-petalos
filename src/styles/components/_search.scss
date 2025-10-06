@@ -1,0 +1,39 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.search {
+  @include flex-center();
+  padding-bottom: $spacing-l;
+  width: 100%;
+
+  .input-wrapper {
+    position: relative;
+    width: 100%;
+
+    @include respond(sm) {
+      width: 600px;
+    }
+
+    input {
+      border: 1px solid $color-neutral-400;
+      border-radius: $radius-xs;
+      padding: $spacing-2xs $spacing-s $spacing-2xs $spacing-xl;
+      width: 100%;
+      background-color: $color-neutral-100;
+      font-size: 1rem;
+      color: $color-neutral-900;
+
+      &::placeholder {
+        color: $color-neutral-600;
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: $spacing-s;
+      transform: translateY(-50%);
+      height: 20px;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.card {
+  background-color: $color-neutral-100;
+  border-radius: $radius-s;
+  padding: $spacing-s;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-s;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05), 0 4px 4px rgba(0, 0, 0, 0.1);
+
+  h4 {
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    color: $color-neutral-1000;
+  }
+
+  p {
+    font-family: "DM Sans", sans-serif;
+    color: $color-neutral-800;
+    font-size: 16px;
+  }
+
+  .image-container {
+    position: relative;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 288px;
+      border-radius: $radius-s;
+      object-fit: cover;
+      display: block;
+    }
+
+    .badge {
+      position: absolute;
+      border-radius: $radius-full;
+      font-size: 14px;
+      font-weight: 600;
+      background-color: $color-neutral-100;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+      user-select: none;
+    }
+
+    .badge--new {
+      top: 0;
+      right: 0;
+      margin: $spacing-2xs;
+      color: $color-success-600;
+      background-color: $color-success-200;
+      padding: 4px 10px;
+      font-weight: 400;
+    }
+
+    .badge--price {
+      bottom: 0;
+      left: 0;
+      margin: 0 0 $spacing-xs $spacing-xs;
+      padding: 4px 10px;
+      color: $color-neutral-1000;
+      background-color: $color-neutral-100;
+    }
+
+    .badge--arrow {
+      bottom: 0;
+      right: 0;
+      margin: $spacing-2xs;
+      background-color: $color-neutral-100;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: $radius-full;
+      cursor: pointer;
+      padding: 8px;
+
+      img {
+        object-fit: contain;
+        display: block;
+      }
+    }
+  }
+}

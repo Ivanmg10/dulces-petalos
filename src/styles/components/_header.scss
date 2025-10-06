@@ -1,0 +1,17 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.header {
+  background-color: $color-neutral-100;
+  height: 66px;
+  @include flex-center();
+
+  a {
+    display: inline-block;
+
+    img {
+      height: 40px;
+      width: auto;
+    }
+  }
+}
