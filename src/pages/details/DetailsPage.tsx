@@ -14,8 +14,6 @@ export default function DetailsPage() {
       .catch((err) => console.error(err));
   }, [id]);
 
-  console.log(data);
-
   if (!data) return null;
   return (
     <main className="details container">
@@ -38,8 +36,11 @@ export default function DetailsPage() {
           </div>
           <p className="price">€{data.price.toFixed(2)}</p>
           <ul>
-            <li>Regar 1 vez por semana</li>
-            <li>Fertilizar con phosphorus</li>
+            <li>
+              Regar {data.wateringsPerWeek}{" "}
+              {data.wateringsPerWeek > 1 ? "veces" : "vez"} por dia
+            </li>
+            <li>Fertilizar con {data.fertilizerType}</li>
           </ul>
           <button className="btn-primary">Añadir al carrito</button>
         </div>
